@@ -1,0 +1,150 @@
+$primary-white-color: #ffffff;
+$primary-orange-color: #ff7373;
+$primary-orange-hover-color: #fc9292;
+
+$top-text-color: #1d252c;
+$section-title-color: #0b254b;
+$section-title-dark-color: #1d252c;
+$section-desc-color: #5e6e89;
+$section-desc-dark-color: #1d252c;
+$sneaker-title-color: #1d293f;
+$sneaker-price-color: #623232;
+
+$background-grey: #f0efee;
+$background-pink: rgba(255, 115, 115, 0.33);
+$background-brown: #623232;
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1110px;
+  min-width: 320px;
+  padding: 0px 15px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1110px;
+  }
+}
+
+.grey-bg {
+  background-color: $background-grey;
+}
+
+.pink-bg {
+  background-color: $background-pink;
+}
+
+.brown-bg {
+  background-color: $background-brown;
+}
+
+body {
+  color: $top-text-color;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@mixin text-options(
+  $family: "Nunito",
+  $size: 16px,
+  $margin-t: 0px,
+  $margin-b: 0px
+) {
+  font-family: $family;
+  font-size: $size;
+  margin-top: $margin-t;
+  margin-bottom: $margin-b;
+}
+
+.section-title {
+  @include text-options("Nunito", 40px);
+  font-weight: 500;
+  text-align: center;
+  color: $section-title-color;
+}
+
+.section-title-dark {
+  @include text-options("Nunito", 40px);
+  font-weight: 700;
+  line-height: 47px;
+  color: $section-title-color;
+}
+
+.section-desc {
+  @include text-options("Nunito", 16px);
+  text-align: center;
+  color: $section-desc-color;
+}
+
+.section-desc-dark {
+  @include text-options("Nunito", 16px, 15px);
+  color: $section-desc-dark-color;
+}
+
+.sneaker-title {
+  @include text-options("Nunito", 16px);
+  color: $sneaker-title-color;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sneaker-price {
+  @include text-options("Nunito", 20px);
+  color: $sneaker-price-color;
+  text-align: right;
+}
+
+%btn {
+  @include text-options("Nunito", 20px);
+  color: $primary-white-color;
+  border-radius: 4px;
+  padding: 8px 44px;
+  line-height: 24px;
+}
+
+.default-button {
+  @extend %btn;
+  margin-top: 45px;
+  background: $primary-orange-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $primary-orange-hover-color;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 525px) {
+    margin-top: 25px;
+  }
+}

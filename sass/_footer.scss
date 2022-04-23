@@ -1,0 +1,74 @@
+$primary-orange-color: #ff7373;
+$primary-orange-hover-color: #fc9292;
+$primary-white-color: #ffffff;
+
+@mixin text-options(
+  $family: 'Nunito',
+  $size: 16px,
+  $margin-t: 0px,
+  $margin-b: 0px
+) {
+  font-family: $family;
+  font-size: $size;
+  margin-top: $margin-t;
+  margin-bottom: $margin-b;
+}
+
+.container-footer {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  color: $primary-white-color;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1.5px solid $primary-white-color;
+  padding-top: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    @include text-options('Nunito', 16px, 21px);
+  }
+}
+
+.footer-logo {
+  flex-basis: 30%;
+}
+
+.footer-desc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.footer-list {
+  list-style: none;
+  flex: 0 1 30%;
+  margin-right: 25px;
+
+  transition: all 0.3s ease;
+
+  &:last-of-type {
+    margin-right: 0px;
+  }
+
+  &-item {
+    margin-bottom: 20px;
+
+    cursor: pointer;
+
+    &:first-child {
+      color: $primary-orange-color;
+    }
+
+    &:hover {
+      transition: all 0.3s ease;
+      color: $primary-orange-hover-color;
+    }
+  }
+}

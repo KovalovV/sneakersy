@@ -1,0 +1,35 @@
+$primary-grey-color: #e6e6e6;
+$primary-black-color: #494d55;
+$primary-white-color: #ffffff;
+
+@mixin text-options(
+  $family: 'Nunito',
+  $size: 16px,
+  $margin-t: 0px,
+  $margin-b: 0px
+) {
+  font-family: $family;
+  font-size: $size;
+  margin-top: $margin-t;
+  margin-bottom: $margin-b;
+}
+
+.about-page {
+  width: 80%;
+
+  margin-top: 130px;
+  margin-bottom: 71px;
+
+  &-title {
+    @include text-options('Nunito', 21px, 0, 31px);
+    text-transform: uppercase;
+  }
+
+  &-container {
+    margin: 0 auto;
+  }
+
+  P {
+    @include text-options('Nunito', 18px, 0, 25px);
+  }
+}

@@ -1,0 +1,94 @@
+$primary-orange-color: #ff7373;
+$primary-orange-hover-color: #fc9292;
+$primary-grey-color: #a2a6af;
+$primary-black-color: #272727;
+$primary-white-color: #ffffff;
+$primary-window-color: #f7f8fa;
+$pricing-green-color: #75c181;
+$pricing-blue-color: #58bbee;
+$pricing-orange-color: #f8a13f;
+
+$autor-color: #7c8087;
+
+@mixin text-options(
+  $family: "Helvetica",
+  $size: 16px,
+  $margin-t: 0px,
+  $margin-b: 0px
+) {
+  font-family: $family;
+  font-size: $size;
+  margin-top: $margin-t;
+  margin-bottom: $margin-b;
+}
+
+.team-bg {
+  background-color: #f5f5f5;
+}
+
+.testimonials-container {
+  padding: 90px 0px;
+}
+
+.profile-card {
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-img img {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto;
+}
+
+.testimonials-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
+
+.profile-card {
+  flex-basis: 30%;
+  background-color: $primary-white-color;
+  border-radius: 10px;
+  @media (max-width: 768px) {
+    flex-basis: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+.star-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+
+  &-item {
+    margin-right: 3px;
+
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+.feedback {
+  @include text-options("Nunito", 22px);
+  line-height: 29px;
+  text-align: center;
+}
+
+.author {
+  @include text-options("Nunito", 18px, 6px);
+  font-weight: 400;
+  line-height: 21px;
+  text-align: center;
+  color: $autor-color;
+}
