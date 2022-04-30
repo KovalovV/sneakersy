@@ -1,11 +1,19 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="ua">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +26,9 @@
     <header>
       <nav class="nav-container">
         <div class="container top-bar-container">
-          <a href="./index.html" class="logo-container">
+          <a href="./index.php" class="logo-container">
             <div class="logo-icon-container">
-                <img class="logo-icon" src="img/logo.png" alt="Logo" />
+                <img class="logo-icon" src="../../img/logo.png" alt="Logo" />
             </div>
             <div>
               <h1 class="logo-title">Sneakersy</h1>
@@ -33,24 +41,32 @@
           </div>
           <ul class="nav-list">
             <li class="nav-list-item">
-              <a href="#testimonials">Більше</a>
+              <a href="./about.html">Більше</a>
             </li>
             <li class="nav-list-item">
-              <a href="./pages/about.html">Про нас</a>
+              <a href="./about.html">Про нас</a>
             </li>
             <li class="nav-list-item">
-              <a href="#сontact">Контакти</a>
+              <a href="./about.html">Контакти</a>
             </li>
           </ul>
           <ul class="nav-list">
             <li class="nav-list-item">
-              <a href="#testimonials"
-                ><img src="./img/profile.png" alt="Profile"
+               <a><?php echo $_SESSION['name']; ?></a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#"
+                ><img src="../img/profile.png" alt="Profile"
               /></a>
             </li>
             <li class="nav-list-item">
-              <a href="#testimonials"
-                ><img src="./img/cart.png" alt="Cart"
+              <a href="#"
+                ><img src="../img/cart.png" alt="Cart"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a href="../scripts/logout.php"
+                ><img src="../img/logout.png" alt="Logout"
               /></a>
             </li>
           </ul>
@@ -61,7 +77,7 @@
           <div class="header-content">
             <div class="header-text">
               <div class="logo-icon-container">
-                <img class="logo-icon" src="img/logo.png" alt="Logo" />
+                <img class="logo-icon" src="../img/logo.png" alt="Logo" />
               </div>
               <h2 class="header-title">The Sneakersy Shop</h2>
               <p class="header-desc">
@@ -80,7 +96,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img/converse-cta 1.png" alt="Converse CT All Star II" />
+              <img src="../img/converse-cta 1.png" alt="Converse CT All Star II" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -93,7 +109,7 @@
           <div class="sneaker-img">
             <a href="./pages/product.html">
               <img
-                src="img/adidas-ocm 1.png"
+                src="../img/adidas-ocm 1.png"
                 alt="Adidas Originals Courtvantage Mesh"
               />
             </a>
@@ -107,7 +123,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img/asics-gel 1.png" alt="Asics GEL-Epirus" />
+              <img src="../img/asics-gel 1.png" alt="Asics GEL-Epirus" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -119,7 +135,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img/adidas-oc1 1.png" alt="Adidas Original Climacool 1" />
+              <img src="../img/adidas-oc1 1.png" alt="Adidas Original Climacool 1" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -131,7 +147,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img/adidas-pbc 1.png" alt="Adidas Protect Core 3C" />
+              <img src="../img/adidas-pbc 1.png" alt="Adidas Protect Core 3C" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -143,7 +159,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img//puma-dwc 1.png" alt="Adidas Alphabounce 1M" />
+              <img src="../img//puma-dwc 1.png" alt="Adidas Alphabounce 1M" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -155,7 +171,7 @@
         <div class="sneaker-item">
           <div class="sneaker-img">
             <a href="./pages/product.html">
-              <img src="img/adidas-a1m 1.png" alt="Adidas Alphabounce 1M" />
+              <img src="../img/adidas-a1m 1.png" alt="Adidas Alphabounce 1M" />
             </a>
           </div>
           <div class="sneaker-desc">
@@ -168,7 +184,7 @@
           <div class="sneaker-img">
             <a href="./pages/product.html">
               <img
-                src="img/converse-bsb 1.png"
+                src="../img/converse-bsb 1.png"
                 alt="Converse Breakpoint Suede Blue"
               />
             </a>
@@ -184,10 +200,10 @@
       <section class="container container-features">
         <div class="flex-row">
           <div>
-            <h2 class="section-title-dark">Одягайтеся стильно та бюджетно</h2>
+            <h2 class="section-title-dark features-title">Одягайтеся стильно та бюджетно</h2>
             <p class="section-desc-dark">Зробіть свій стиль разом з нами</p>
             <div class="features-img-mobile">
-              <img src="img/sneaker.png" alt="Nike Jordan" />
+              <img src="../img/sneaker.png" alt="Nike Jordan" />
             </div>
             <div class="features-desc">
               <ul class="features-list">
@@ -201,7 +217,7 @@
           </div>
 
           <div class="features-img">
-            <img src="img/sneaker.png" alt="Nike Jordan" />
+            <img src="../img/sneaker.png" alt="Nike Jordan" />
           </div>
         </div>
       </section>
@@ -213,23 +229,23 @@
             <div class="testimonials-cards">
               <div class="profile-card">
                 <div class="profile-img">
-                  <img src="img/man1.png" alt="People" />
+                  <img src="../img/man1.png" alt="People" />
                 </div>
                 <ul class="star-list">
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                 </ul>
                 <h3 class="feedback">
@@ -240,20 +256,20 @@
               
               <div class="profile-card">
                 <div class="profile-img">
-                  <img src="img/man2.png" alt="People" />
+                  <img src="../img/man2.png" alt="People" />
                 </div>
                 <ul class="star-list">
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                 </ul>
                 <h3 class="feedback">
@@ -264,23 +280,23 @@
 
               <div class="profile-card">
                 <div class="profile-img">
-                  <img src="img/man3.png" alt="People" />
+                  <img src="../img/man3.png" alt="People" />
                 </div>
                 <ul class="star-list">
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                   <li class="star-list-item">
-                    <img src="img/Star 1.png" alt="Star" />
+                    <img src="../img/Star 1.png" alt="Star" />
                   </li>
                 </ul>
                 <h3 class="feedback">
@@ -301,7 +317,7 @@
             <div class="sneaker-img">
               <a href="./pages/product.html">
                 <img
-                  src="img/adidas-ocm 1.png"
+                  src="../img/adidas-ocm 1.png"
                   alt="Adidas Originals Courtvantage Mesh"
                 />
               </a>
@@ -315,7 +331,7 @@
           <div class="sneaker-item">
             <div class="sneaker-img">
               <a href="./pages/product.html">
-                <img src="img/adidas-oc1 1.png" alt="Adidas Original Climacool 1" />
+                <img src="../img/adidas-oc1 1.png" alt="Adidas Original Climacool 1" />
               </a>
             </div>
             <div class="sneaker-desc">
@@ -327,7 +343,7 @@
           <div class="sneaker-item">
             <div class="sneaker-img">
               <a href="./pages/product.html">
-                <img src="img//puma-dwc 1.png" alt="Adidas Alphabounce 1M" />
+                <img src="../img//puma-dwc 1.png" alt="Adidas Alphabounce 1M" />
               </a>
             </div>
             <div class="sneaker-desc">
@@ -340,7 +356,7 @@
             <div class="sneaker-img">
               <a href="./pages/product.html">
                 <img
-                  src="img/converse-bsb 1.png"
+                  src="../img/converse-bsb 1.png"
                   alt="Converse Breakpoint Suede Blue"
                 />
               </a>
@@ -358,7 +374,7 @@
                 <div class="footer-logo">
                     <a href="#" class="logo-container">
                         <div class="logo-icon-container logo-icon-container-big">
-                          <img class="logo-icon" src="img/logo.png" alt="Logo" />
+                          <img class="logo-icon" src="../img/logo.png" alt="Logo" />
                         </div>
                         <div>
                           <h1 class="logo-title logo-title-big">Sneakersy</h1>
@@ -393,3 +409,10 @@
     </div>
   </body>
 </html>
+
+<?php 
+}else{
+     header("Location: index.php");
+     exit();
+}
+ ?>

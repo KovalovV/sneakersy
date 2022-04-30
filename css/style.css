@@ -31,7 +31,7 @@
 
 body {
   color: #1d252c;
-  font-family: "Nunito", Arial, sans-serif;
+  font-family: 'Nunito', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5; }
 
@@ -161,40 +161,27 @@ a {
   font-weight: 700; }
   .logo-title-big {
     font-size: 38px; }
+  @media (max-width: 500px) {
+    .logo-title {
+      display: none; } }
 
 .nav-list {
   list-style: none;
   display: flex;
   order: 2; }
-  @media (max-width: 767px) {
-    .nav-list:first-of-type {
-      position: absolute;
-      top: 72px;
-      left: 0;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      background: #ffffff;
-      transform: translate(130%, 0%);
-      transition: all 2s ease; }
-      .nav-list:first-of-type:hover {
-        transform: translate(0%, 0%);
-        transition: all 1s ease; } }
   .nav-list-item {
-    margin-left: 30px;
+    margin-left: 15px;
     position: relative; }
-    @media (max-width: 767px) {
-      .nav-list-item {
-        margin-left: 0px; } }
-    .nav-list-item:first-child {
-      margin-left: 0px; }
+    .nav-list-item img {
+      width: 32px;
+      height: 32px; }
     .nav-list-item a {
       font-size: 16px;
       font-weight: 700;
       color: #272727;
       transition: all 0.3s ease; }
       .nav-list-item a:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 44px;
@@ -209,15 +196,31 @@ a {
       .nav-list-item a:hover {
         color: #272727;
         transition: all 0.3s ease; }
-        @media (max-width: 767px) {
-          .nav-list-item a:hover {
-            color: #ffffff; } }
         .nav-list-item a:hover::before {
           width: 100%;
           transition: all 0.3s ease; }
       @media (max-width: 767px) {
         .nav-list-item a {
           line-height: 2.5; } }
+  .nav-list:last-of-type-item {
+    margin-left: 15px !important; }
+    @media (max-width: 767px) {
+      .nav-list:last-of-type-item {
+        margin-left: 15px; } }
+  @media (max-width: 767px) {
+    .nav-list:first-of-type {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background: #ffffff;
+      transform: translate(130%, 0%);
+      transition: all 2s ease; }
+      .nav-list:first-of-type:hover {
+        transform: translate(0%, 0%);
+        transition: all 1s ease; } }
 
 .nav-burger-menu {
   display: none;
@@ -356,6 +359,12 @@ a {
     .container-features {
       text-align: center; } }
 
+.features-title {
+  text-align: left; }
+  @media (max-width: 625px) {
+    .features-title {
+      text-align: center; } }
+
 .features-desc {
   display: flex;
   justify-content: space-between;
@@ -385,7 +394,7 @@ a {
       .features-list-item {
         margin-left: 0px; } }
     .features-list-item::before {
-      content: "";
+      content: '';
       background: url(../img/checkmark-circle-outline.png) no-repeat left top;
       height: 30px;
       width: 30px;
@@ -604,3 +613,74 @@ a {
           width: auto; }
       .row-right {
         padding-left: 0; } }
+
+* {
+  font-family: sans-serif;
+  box-sizing: border-box; }
+
+form {
+  width: 500px;
+  border: 2px solid #ccc;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px; }
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px; }
+
+input {
+  display: block;
+  border: 2px solid #ccc;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px; }
+
+label {
+  color: #888;
+  font-size: 18px;
+  padding: 10px; }
+
+button {
+  float: right;
+  background: #555;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none; }
+
+button:hover {
+  opacity: 0.7; }
+
+.error {
+  background: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto; }
+
+.success {
+  background: #d4edda;
+  color: #40754c;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto; }
+
+h1 {
+  text-align: center;
+  color: #fff; }
+
+.ca {
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #444;
+  cursor: pointer; }
+
+.ca:hover {
+  text-decoration: underline; }

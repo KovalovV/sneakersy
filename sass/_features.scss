@@ -3,7 +3,7 @@ $primary-black-color: #494d55;
 $primary-white-color: #ffffff;
 
 @mixin text-options(
-  $family: "Nunito",
+  $family: 'Nunito',
   $size: 16px,
   $margin-t: 0px,
   $margin-b: 0px
@@ -26,6 +26,14 @@ $primary-white-color: #ffffff;
 .container-features {
   padding-top: 133px;
   padding-bottom: 150px;
+
+  @media (max-width: 625px) {
+    text-align: center;
+  }
+}
+
+.features-title {
+  text-align: left;
 
   @media (max-width: 625px) {
     text-align: center;
@@ -64,7 +72,7 @@ $primary-white-color: #ffffff;
     }
 
     &::before {
-      content: "";
+      content: '';
       background: url(../img/checkmark-circle-outline.png) no-repeat left top;
       height: 30px;
       width: 30px;

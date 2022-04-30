@@ -55,7 +55,7 @@ $background-brown: #623232;
 
 body {
   color: $top-text-color;
-  font-family: "Nunito", Arial, sans-serif;
+  font-family: 'Nunito', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -76,7 +76,7 @@ a {
 }
 
 @mixin text-options(
-  $family: "Nunito",
+  $family: 'Nunito',
   $size: 16px,
   $margin-t: 0px,
   $margin-b: 0px
@@ -88,45 +88,45 @@ a {
 }
 
 .section-title {
-  @include text-options("Nunito", 40px);
+  @include text-options('Nunito', 40px);
   font-weight: 500;
   text-align: center;
   color: $section-title-color;
 }
 
 .section-title-dark {
-  @include text-options("Nunito", 40px);
+  @include text-options('Nunito', 40px);
   font-weight: 700;
   line-height: 47px;
   color: $section-title-color;
 }
 
 .section-desc {
-  @include text-options("Nunito", 16px);
+  @include text-options('Nunito', 16px);
   text-align: center;
   color: $section-desc-color;
 }
 
 .section-desc-dark {
-  @include text-options("Nunito", 16px, 15px);
+  @include text-options('Nunito', 16px, 15px);
   color: $section-desc-dark-color;
 }
 
 .sneaker-title {
-  @include text-options("Nunito", 16px);
+  @include text-options('Nunito', 16px);
   color: $sneaker-title-color;
   font-weight: 500;
   line-height: 1;
 }
 
 .sneaker-price {
-  @include text-options("Nunito", 20px);
+  @include text-options('Nunito', 20px);
   color: $sneaker-price-color;
   text-align: right;
 }
 
 %btn {
-  @include text-options("Nunito", 20px);
+  @include text-options('Nunito', 20px);
   color: $primary-white-color;
   border-radius: 4px;
   padding: 8px 44px;

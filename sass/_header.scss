@@ -9,7 +9,7 @@ $pricing-blue-color: #58bbee;
 $pricing-orange-color: #f8a13f;
 
 @mixin text-options(
-  $family: "Nunito",
+  $family: 'Nunito',
   $size: 16px,
   $margin-t: 0px,
   $margin-b: 0px
@@ -21,7 +21,7 @@ $pricing-orange-color: #f8a13f;
 }
 
 .header-bg {
-  background: url("../img/image-bg.png") no-repeat center top/cover;
+  background: url('../img/image-bg.png') no-repeat center top/cover;
 }
 
 .nav-container {
@@ -74,6 +74,10 @@ $pricing-orange-color: #f8a13f;
   &-big {
     font-size: 38px;
   }
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 }
 
 .nav-list {
@@ -82,35 +86,13 @@ $pricing-orange-color: #f8a13f;
 
   order: 2;
 
-  &:first-of-type {
-    @media (max-width: 767px) {
-      position: absolute;
-      top: 72px;
-      left: 0;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      background: $primary-white-color;
-      transform: translate(130%, 0%);
-      transition: all 2s ease;
-
-      &:hover {
-        transform: translate(0%, 0%);
-        transition: all 1s ease;
-      }
-    }
-  }
-
   &-item {
-    margin-left: 30px;
+    margin-left: 15px;
     position: relative;
 
-    @media (max-width: 767px) {
-      margin-left: 0px;
-    }
-
-    &:first-child {
-      margin-left: 0px;
+    img {
+      width: 32px;
+      height: 32px;
     }
 
     a {
@@ -120,7 +102,7 @@ $pricing-orange-color: #f8a13f;
       transition: all 0.3s ease;
 
       &:before {
-        content: "";
+        content: '';
         display: block;
         position: absolute;
         top: 44px;
@@ -139,10 +121,6 @@ $pricing-orange-color: #f8a13f;
         color: $primary-black-color;
         transition: all 0.3s ease;
 
-        @media (max-width: 767px) {
-          color: $primary-white-color;
-        }
-
         &::before {
           width: 100%;
           transition: all 0.3s ease;
@@ -151,6 +129,35 @@ $pricing-orange-color: #f8a13f;
 
       @media (max-width: 767px) {
         line-height: 2.5;
+      }
+    }
+  }
+
+  &:last-of-type {
+    &-item {
+      margin-left: 15px !important;
+
+      @media (max-width: 767px) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &:first-of-type {
+    @media (max-width: 767px) {
+      position: absolute;
+      top: 72px;
+      left: 0;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background: $primary-white-color;
+      transform: translate(130%, 0%);
+      transition: all 2s ease;
+
+      &:hover {
+        transform: translate(0%, 0%);
+        transition: all 1s ease;
       }
     }
   }
@@ -221,7 +228,7 @@ $pricing-orange-color: #f8a13f;
 }
 
 .header-title {
-  @include text-options("Nunito", 40px, 0px, 0px);
+  @include text-options('Nunito', 40px, 0px, 0px);
   text-align: center;
 
   @media (max-width: 525px) {
@@ -234,7 +241,7 @@ $pricing-orange-color: #f8a13f;
 }
 
 .header-desc {
-  @include text-options("Nunito", 18px, 0px, 5px);
+  @include text-options('Nunito', 18px, 0px, 5px);
   font-weight: 500;
   line-height: 26px;
   text-align: center;
